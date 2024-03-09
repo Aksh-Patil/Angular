@@ -1,0 +1,14 @@
+{
+  "employeelist": [
+    {
+      "id": "1",
+      "username": "John Doe",
+      "password": "asdada"
+    },
+    {
+      "id": "7e78",
+      "username": "asfasf",
+      "password": "safasf"
+    }
+  ]
+}

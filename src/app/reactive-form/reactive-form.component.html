@@ -1,0 +1,42 @@
+<p>reactive-form works!</p>
+<div class = "login-card">
+    <h2>Login</h2>
+    <form  [formGroup] = "userForm">
+    <div   class       = "input-container">
+    <label for         = "username">Enter Username</label>
+    <input type        = "text" id = "username" formControlName = "username" name = "username" required>
+      </div>
+      <Span  class = "error-message" *ngIf = "this.userForm.controls['username'].touched && this.userForm.controls['username'].invalid">INVALID USERNAME</Span>
+      <div   class = "input-container">
+      <label for   = "password">Enter Password</label>
+      <input type  = "password" id         = "password" formControlName = "password" name = "password" required>
+      </div>
+      <Span class = "error-message" *ngIf = "this.userForm.controls['password'].touched && this.userForm.controls['password'].invalid">INVALID PASSWORD</Span>
+
+      <button type = "submit" [disabled] = "!userForm.valid" (click) = "submitData()">Login</button>
+    </form>
+  </div>
+
+  <table id = "clients">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let u of userList">
+        <td>{{u.id}}</td>
+        <td>{{u.username}}</td>
+        <td>{{u.password}}</td>
+        <td>
+          <button id="tableactionbutton" (click)="editUser(u.id)">Edit</button>
+          <button id="tableactionbutton" (click)="deleteUser(u.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+
