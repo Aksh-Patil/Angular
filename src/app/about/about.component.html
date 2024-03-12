@@ -16,7 +16,7 @@
     <h1>Created by: {{name}} {{surName}}</h1>
     <h1>From: {{Location}}</h1>
     <button (click)="changeDetail()">Click here</button>
-    <div *ngIf="isVisible">
+    <div *ngIf= "isVisible" >
     <p>NGMODEL IN WORK [two way data binding]</p>
     <input [(ngModel)]="name" />
     {{name}}
