@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-@Input() isVisible : boolean = false;
+@Input() isVisible : boolean = true;
 
   title = 'SecondAngular';
   name = 'Akshay';
