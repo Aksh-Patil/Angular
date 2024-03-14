@@ -8,7 +8,10 @@ import { Component, Input } from '@angular/core';
 export class AboutComponent {
 @Input() isVisible : boolean = true;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 08ccba97b174f35c645d5a139e73d6226f9da3d0
   title = 'SecondAngular';
   name = 'Akshay';
   surName = 'Patil';
