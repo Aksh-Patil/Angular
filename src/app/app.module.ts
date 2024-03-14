@@ -9,12 +9,16 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { RegistrationComponent } from './registration/registration.component';
+import { Login2Component } from './login2/login2.component';
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     LoginComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    RegistrationComponent,
+    Login2Component
   ],
   imports: [
     BrowserModule,

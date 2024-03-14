@@ -1,24 +1,13 @@
 <p>about page works!</p>
 
-
-<!-- <h1>Shital + Lokare</h1>
-<p>shitallokare1997gmail.com</p>
-
-<h1>{{name}} + {{surName}}</h1>
-<p>{{email}}</p>
-
-<button (click)="changeDetail()">ChangeText</button> -->
-
 <div [style.background-color]="backgroundColor">
-    
-    
     <p>INTERPOLATION IN WORK[one way data binding]</p>
     <h1>Created by: {{name}} {{surName}}</h1>
     <h1>From: {{Location}}</h1>
     <button (click)="changeDetail()">Click here</button>
-
-    <p>NGMODEL IN WORK [two way data binding]</p>
-    <input [(ngModel)]="name" />
-    {{name}}
-    
-  </div>
+    <div *ngIf="isVisible">
+        <p>NGMODEL IN WORK [two way data binding]</p>
+        <input [(ngModel)]="name" />
+        {{name}}
+    </div>
+</div>

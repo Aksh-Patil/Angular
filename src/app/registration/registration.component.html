@@ -1,0 +1,30 @@
+<p *ngIf="isVisible">registration works!</p>
+<form [formGroup]="registration">
+    <div class="container">
+      <h1>{{formHeading}}</h1>
+      <p *ngIf=" isVisible">Please fill in this form to create an account.</p>
+      <hr>
+        
+      
+      <label for="email"><b>Email</b></label>
+      <input formControlName = "username" type="text" placeholder="Enter Email" name="email" id="email" required>
+      
+
+      <label for="psw"><b>Password</b></label>
+      <input formControlName = "password" type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      <div *ngIf=" isVisible">
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input *ngIf="isVisibleForm" formControlName = "password" type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    
+      <hr>
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    </div>
+      <button type="submit" (click)=" submitData()" class="registerbtn">{{buttonName}}</button>
+    
+    
+    <div class="container signin" *ngIf=" isVisible">
+      <p>Already have an account? <a href="#" (click)="redirectToLogin()">Sign in</a>.</p>
+    </div>
+  </div>
+  </form>
+  
